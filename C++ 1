@@ -69,3 +69,51 @@ int main()
 
     return 0;
 }
+###3.program
+#include <iostream>
+
+using namespace std;
+bool equ(double v1, double v2)/*alprogram(a lenti után), v1 v2 paraméterek*/
+{
+    if( abs(v1-v2)<0.000001)
+        return true;
+    else
+        return false;
+}
+
+int main()
+{
+double a = 0.2;
+double b = 0.1;
+double c = 0.3;
+double d = 0.08;
+double e = 0.02;
+double f = 0.3;
+if ((a+b+c+f+e+d)==1) /* if d in last then it's not ok*/
+    cout << "ok";
+else
+    cout << "nem ok";
+    
+
+    
+double x = 0.3333;
+double y = 0.2222;
+double z = 0.5555;
+if (abs(x + y - z) <0.00001)
+    cout << "\nok\n";
+else
+    cout << "\nnot ok\n";
+
+cout << equ(x+y,z);
+
+
+    return 0;
+}
+
+float round(float var) ###equ függvény alá mehet
+{
+    float value = (int)(var * 100 + .5);
+    return (float)value / 100;
+    
+}
+BMI calculator megnézni
