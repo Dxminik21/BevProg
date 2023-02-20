@@ -1,0 +1,71 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int a_x = 1;
+    int a_y = 1;
+    int b_x = 5;
+    int b_y = 1;
+    int c_x = 5;
+    int c_y = 6;
+    int d_x = 1;
+    int d_y = 6;
+    
+    int p_x;
+    int p_y;
+    
+    cout << "Kérem a P pont x koordinátáját: ";
+    cin >> p_x;
+    cout << "Kérem a P pont y koordinátáját: ";
+    cin >> p_y;
+    
+    
+    
+    cout << "Az x koordinátája: " << p_x << endl;
+    cout << "Az y koordinátája: " << p_y << "\n" ;
+    
+    if (a_x < p_x && p_x < c_x && b_y < p_y && p_y < d_y)
+    {
+        cout << "Belső pontja";
+    }
+    else if (a_x > p_x || p_x > c_x || b_y > p_y || p_y > d_y)
+    {
+        cout << "Külső pontja";
+    }
+    else
+    {   
+        cout << "Illeszkedik a téglalapra";
+    }
+    return 0;
+}
+
+###2.program
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    double R;
+    double A;
+    double l;
+    double p;
+    
+    cout << "Adja meg az R értékét: ";
+    cin >> R;
+    
+    cout << "Adja meg az A értékét: ";
+    cin >> A;
+    
+    cout << "Adja meg az l értékét: ";
+    cin >> l;
+    
+    p = (R*A)/l;
+    cout << "A vezeték ellenállása: " << p;
+    
+
+    return 0;
+}
