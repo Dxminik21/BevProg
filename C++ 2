@@ -1,0 +1,44 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+    double piover4 = 0;
+    for(int k=1; k<=50;k++)
+    {
+        piover4+=pow((-1),k)*1/(2*k+1);
+        
+    }
+    
+    cout<<piover4*4;
+
+    return 0;
+}
+
+
+### 2
+
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+    double pioverTwo = 1;
+    for(double k=2; k<=1000;k+=2)
+    {
+        pioverTwo*=k/(k-1)*k/(k+1);
+        
+    }
+    
+    cout<<pioverTwo*2;
+
+
+    return 0;
+}
+
+### 3 
+
