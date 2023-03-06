@@ -2,7 +2,7 @@
 
 using namespace std;
 
-void printOut(int arr[][]){
+/*void printOut(int arr[][]){
     
 }
 int printSum(int arr[][]){
@@ -10,6 +10,7 @@ int printSum(int arr[][]){
     
     return sum;
 }
+*/
 
 
 int randbetween(int min, int max){
