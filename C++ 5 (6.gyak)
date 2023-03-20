@@ -1,0 +1,177 @@
+
+#include <iostream>
+
+using namespace std;
+
+enum sensorType{GAS=10,TEMP=20,PRES=30};
+
+struct sensor{
+    int id;
+    string sNAME;
+    sensorType type;
+    int pos_x;
+    int pos_y;
+    double range;
+    double bLevel;
+};
+
+int main(){
+    sensor s1;
+    s1.id = 6;
+    s1.sNAME = "sen1";
+    s1.type = GAS;
+    s1.pos_x = 10;
+    s1.pos_y = 20;
+    s1.range = 100;
+    s1.bLevel = 0.8;
+    cout << s1.id << " " << s1.type << endl;
+    return 0;
+    
+}
+lista nélkül;
+
+#include <iostream>
+#include <list>
+
+using namespace std;
+
+enum sensorType{GAS=10,TEMP=20,PRES=30};
+
+struct sensor{
+    int id;
+    string sNAME;
+    sensorType type;
+    int pos_x;
+    int pos_y;
+    double range;
+    double bLevel;
+};
+
+int main(){
+    sensor s1;
+    s1.id = 6;
+    s1.sNAME = "sen1";
+    s1.type = GAS; //GAS helyén semmi, (1,2,3) if 1 -> s1.type = GAS
+    s1.pos_x = 100; //random 0-1000
+    s1.pos_y = 200; //random 0-1000
+    s1.range = 100; //random 0-120
+    s1.bLevel = 0.8; // random 0-1
+    cout << s1.id << " " << s1.type << endl;
+    
+    list <sensor> sensorNetwork;
+    
+    for(int i=0; i<100;i++){
+        sensor s;
+        s.id=i+4;
+        s.sNAME="sen" +(i+1);
+        s1.type = rand() % 3 + 1; //GAS helyén semmi, (1,2,3) if 1 -> s1.type = GAS
+        s1.pos_x = rand() % 1001; //random 0-1000              ***rand helyén rendes számok
+        s1.pos_y = rand() % 1001; //random 0-1000
+        s1.range = rand() % 121; //random 0-120
+        s1.bLevel = rand() % 1000 / 100000; // random 0-1
+        sensorNetwork.push_front(s);
+    }
+    
+    cout << endl << sensorNetwork.front().id;
+    cout << endl << sensorNetwork.back().id;
+    
+    
+    
+    
+    
+    return 0;
+    
+}
+
+haluska 
+
+#include <iostream>
+#include <list>
+
+using namespace std;
+
+enum sensorType{GAS=10,TEMP=20,PRES=30};
+
+struct sensor{
+    int id;
+    string sNAME;
+    sensorType type;
+    int pos_x;
+    int pos_y;
+    double range;
+    double bLevel;
+};
+
+list<sensor> uploadNetwork (int n){
+    list<sensor>tempSen;
+    for(int i=0; i<100;i++){
+        sensor s;
+        s.id=i+1;
+        s.sNAME="sen" +(i+1);
+        
+        srand((unsigned) time (NULL));
+        
+        int rnd = rand() % 3 + 1;
+        if (rnd==1) s.type = GAS;
+        else if (rnd==2) s.type = TEMP;
+        else s.type = PRES;
+        
+        //s1.type = rand() % 3 + 1; //GAS helyén semmi, (1,2,3) if 1 -> s1.type = GAS
+        s1.pos_x = rand() % 1001; //random 0-1000
+        s1.pos_y = rand() % 1001; //random 0-1000
+        s1.range = rand() % 121; //random 0-120
+        s1.bLevel = (double)(rand() % 100001) / 1000; // random 0-1
+        sensorNetwork.push_front(s);
+        
+}
+
+
+
+
+int main(){
+    sensor s1;
+    s1.id = 6;
+    s1.sNAME = "sen1";
+    s1.type = GAS; //GAS helyén semmi, (1,2,3) if 1 -> s1.type = GAS
+    s1.pos_x = 100; //random 0-1000
+    s1.pos_y = 200; //random 0-1000
+    s1.range = 100; //random 0-120
+    s1.bLevel = 0.8; // random 0-1
+    cout << s1.id << " " << s1.type << endl;
+    
+    list <sensor> sensorNetwork;
+    
+    for(int i=0; i<100;i++){
+        sensor s;
+        s.id=i+1;
+        s.sNAME="sen" +(i+1);
+        
+        srand((unsigned) time (NULL));
+        
+        int rnd = rand() % 3 + 1;
+        if (rnd==1) s.type = GAS;
+        else if (rnd==2) s.type = TEMP;
+        else s.type = PRES;
+        
+        //s1.type = rand() % 3 + 1; //GAS helyén semmi, (1,2,3) if 1 -> s1.type = GAS
+        s1.pos_x = rand() % 1001; //random 0-1000
+        s1.pos_y = rand() % 1001; //random 0-1000
+        s1.range = rand() % 121; //random 0-120
+        s1.bLevel = (double)(rand() % 100001) / 1000; // random 0-1
+        sensorNetwork.push_front(s);
+    }
+    
+    cout << endl << sensorNetwork.front().id;
+    cout << endl << sensorNetwork.back().pos_x;
+    cout << endl << sensorNetwork.back().bLevel;
+    
+    for (auto i : sensorNetwork){
+        
+        cout << i.type << endl;
+    }
+    
+    
+    return 0;
+    
+}
+
